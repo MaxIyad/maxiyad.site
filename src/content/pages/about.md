@@ -1,5 +1,6 @@
 ---
 title: About
+publishDate: 'Oct 2 2023'
 seo:
   title: About Me
   description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.

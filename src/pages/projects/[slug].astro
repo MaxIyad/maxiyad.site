@@ -5,23 +5,23 @@ import ProjectPreview from '../../components/ProjectPreview.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
-    const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
-    const projectCount = projects.length;
-    return projects.map((project, index) => ({
-        params: { slug: project.slug },
+    const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
+    const pageCount = pages.length;
+    return pages.map((page, index) => ({
+        params: { slug: page.slug },
         props: {
-            project,
-            prevProject: index + 1 !== projectCount ? projects[index + 1] : null,
-            nextProject: index !== 0 ? projects[index - 1] : null
+            page,
+            prevPage: index + 1 !== pageCount ? pages[index + 1] : null,
+            nextPage: index !== 0 ? pages[index - 1] : null
         }
     }));
 }
 
-type Props = { project: CollectionEntry<'pages'>; prevProject: CollectionEntry<'pages'>; nextProject: CollectionEntry<'pages'> };
+type Props = { page: CollectionEntry<'pages'>; prevProject: CollectionEntry<'pages'>; nextProject: CollectionEntry<'pages'> };
 
-const { project, prevProject, nextProject } = Astro.props;
-const { title, description, seo } = project.data;
-const { Content } = await project.render();
+const { page, prevPage, nextPage } = Astro.props;
+const { title, description, seo } = page.data;
+const { Content } = await page.render();
 ---
 
 <BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} image={seo?.image} pageType="article" showHeader={false}>
@@ -34,11 +34,11 @@ const { Content } = await project.render();
         </div>
     </article>
     {
-        (prevProject || nextProject) && (
+        (prevPage || nextPage) && (
             <div class="my-16 sm:my-24">
                 <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">View Next</h2>
-                {nextProject && <ProjectPreview project={nextProject} class="mb-10 sm:mb-12" headingLevel="h3" />}
-                {prevProject && <ProjectPreview project={prevProject} class="mb-10 sm:mb-12" headingLevel="h3" />}
+                {nextPage && <ProjectPreview project={nextPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
+                {prevPage && <ProjectPreview project={prevPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
             </div>
         )
     }
