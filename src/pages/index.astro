@@ -17,6 +17,7 @@ const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
     <Hero />
+    <Subscribe class="my-16 sm:my-24" />
     {
         projects?.length > 0 && (
             <div class="mb-16 sm:mb-24">
