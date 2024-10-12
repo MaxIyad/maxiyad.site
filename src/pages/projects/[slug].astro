@@ -17,14 +17,9 @@ export async function getStaticPaths() {
     }));
 }
 
-type Props = { page: CollectionEntry<'pages'>; prevPage: CollectionEntry<'pages'>; nextPage: CollectionEntry<'pages'> };
+type Props = { page: CollectionEntry<'pages'>; prevProject: CollectionEntry<'pages'>; nextProject: CollectionEntry<'pages'> };
 
 const { page, prevPage, nextPage } = Astro.props;
-
-if (!page || !page.data) {
-    console.error('Page data is undefined:', page);
-}
-
 const { title, description, seo } = page.data;
 const { Content } = await page.render();
 ---

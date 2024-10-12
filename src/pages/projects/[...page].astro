@@ -8,12 +8,11 @@ import siteConfig from '../../data/site-config';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-    const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
-    console.log('pages');
-    return paginate(pages, { pageSize: siteConfig.projectsPerPage || 6 });
+    const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
+    return paginate(projects, { pageSize: siteConfig.projectsPerPage || 6 });
 }
 
-type Props = { page: Page<CollectionEntry<'pages'>> };
+type Props = { page: Page<CollectionEntry<'projects'>> };
 
 const { page } = Astro.props;
 const portfolio = page.data;
@@ -26,6 +25,6 @@ const portfolio = page.data;
     showHeader={false}
 >
     <h1 class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl">Projects</h1>
-    {portfolio.map((project) => <ProjectPreview pages={project} class="mb-10 sm:mb-12" />)}
+    {portfolio.map((project) => <ProjectPreview project={project} class="mb-10 sm:mb-12" />)}
     <Pagination page={page} class="my-16 sm:my-24" />
 </BaseLayout>
