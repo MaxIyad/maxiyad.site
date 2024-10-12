@@ -5,8 +5,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://maxiyad.github.io/theme-test/',
-    base: 'theme-test',
+    site: 'https://maxiyad.github.io/',
+    base: '/theme-test',
     integrations: [
         mdx(),
         sitemap(),
