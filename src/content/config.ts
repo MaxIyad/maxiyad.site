@@ -27,7 +27,8 @@ const blog = defineCollection({
 const pages = defineCollection({
     schema: z.object({
         title: z.string(),
-        seo: seoSchema.optional()
+        seo: seoSchema.optional(),
+        excerpt: z.string().optional(),
     })
 });
 
