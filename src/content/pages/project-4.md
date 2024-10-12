@@ -1,6 +1,7 @@
 ---
 title: 'NeuralPlaylist - AI Generated Music Recommendations'
 description: Leveraging advanced algorithms and machine learning, NeuralPlaylist crafts personalized music recommendations based on users' preferences, moods, and even biometric data.
+excerpt: Choosing the right framework for your web project is a critical decision that can significantly impact the development process and the success of your project. With so many options available, it's essential to consider various factors before making a choice.
 publishDate: 'Oct 19 2023'
 seo:
   image:

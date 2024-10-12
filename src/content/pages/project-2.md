@@ -1,6 +1,7 @@
 ---
 title: 'TimeWarp - Travel Agency Website'
 description: Explore the possibilities of time travel through an immersive website for a fictional travel agency, complete with dynamic destination timelines and interactive historical events.
+excerpt: Choosing the right framework for your web project is a critical decision that can significantly impact the development process and the success of your project. With so many options available, it's essential to consider various factors before making a choice.
 publishDate: 'Oct 2 2023'
 isFeatured: true
 seo:

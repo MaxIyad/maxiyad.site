@@ -1,6 +1,7 @@
 ---
 title: FitQuest - AR Fitness Adventure Game
 description: This web application encourages users to embark on thrilling adventures, complete challenges, and achieve fitness goals in an engaging virtual environment.
+excerpt: Choosing the right framework for your web project is a critical decision that can significantly impact the development process and the success of your project. With so many options available, it's essential to consider various factors before making a choice.
 publishDate: 'Dec 28 2023'
 seo:
   image:
