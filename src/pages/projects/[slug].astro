@@ -42,8 +42,8 @@ const { Content } = await page.render();
         (prevPage || nextPage) && (
             <div class="my-16 sm:my-24">
                 <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">View Next</h2>
-                {nextPage && <ProjectPreview pages={nextPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
-                {prevPage && <ProjectPreview pages={prevPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
+                {nextPage && <ProjectPreview project={nextPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
+                {prevPage && <ProjectPreview project={prevPage} class="mb-10 sm:mb-12" headingLevel="h3" />}
             </div>
         )
     }
