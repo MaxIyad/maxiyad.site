@@ -14,9 +14,9 @@ const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
 const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
 ---
 
+<Subscribe class="my-16 sm:my-24" />
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
     <Hero />
-    <Subscribe class="my-16 sm:my-24" />
     {
         projects?.length > 0 && (
             <div class="mb-16 sm:mb-24">
