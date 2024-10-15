@@ -17,13 +17,6 @@ const about = siteConfig.about;
                 </figure>
             )}
             {about.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(about.text)} />}
-            {about.actions && about.actions.length > 0 && (
-                <div class="flex flex-wrap gap-4">
-                    {about.actions.map((action) => (
-                        <Button href={action.href}>{action.text}</Button>
-                    ))}
-                </div>
-            )}
         </section>
     )
 }
