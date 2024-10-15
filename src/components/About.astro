@@ -1,0 +1,29 @@
+---
+import { marked } from 'marked';
+import Button from './Button.astro';
+import siteConfig from '../data/site-config';
+
+const about = siteConfig.about;
+---
+
+{
+    (about?.title || about?.image?.src || about?.text) && (
+        <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
+            {about.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{about.title}</h1>}
+            {about.image?.src && (
+                <figure>
+                    <img class="w-full" src={about.image.src} loading="lazy" decoding="async" alt={about.image.alt || ''} />
+                    {about.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{about.image.caption}</figcaption>}
+                </figure>
+            )}
+            {about.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(about.text)} />}
+            {about.actions && about.actions.length > 0 && (
+                <div class="flex flex-wrap gap-4">
+                    {about.actions.map((action) => (
+                        <Button href={action.href}>{action.text}</Button>
+                    ))}
+                </div>
+            )}
+        </section>
+    )
+}

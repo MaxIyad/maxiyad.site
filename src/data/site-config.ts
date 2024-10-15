@@ -16,6 +16,13 @@ export type Hero = {
     actions?: Link[];
 };
 
+export type About = {
+    title?: string;
+    text?: string;
+    image?: Image;
+    actions?: Link[];
+};
+
 export type Subscribe = {
     title?: string;
     text?: string;
@@ -32,6 +39,7 @@ export type SiteConfig = {
     footerNavLinks?: Link[];
     socialLinks?: Link[];
     hero?: Hero;
+    about?: About;
     subscribe?: Subscribe;
     postsPerPage?: number;
     projectsPerPage?: number;
@@ -99,6 +107,14 @@ const siteConfig: SiteConfig = {
                 href: '/contact'
             }
         ]
+    },
+    about: {
+        title: 'About Title',
+        text: "About desc",
+        image: {
+            src: '/medium.webp',
+            alt: 'Alt Text'
+        },
     },
     subscribe: {
         title: 'Subscribe to Dante Newsletter',
