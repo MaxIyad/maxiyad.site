@@ -1,4 +1,5 @@
 ---
+import { marked } from 'marked';
 import siteConfig from '../data/site-config';
 import * as mainText from '../content/terms/terms.md';
 
@@ -15,7 +16,7 @@ const terms = siteConfig.terms;
                     {terms.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{terms.image.caption}</figcaption>}
                 </figure>
             )}
-            {mainText}
+            {terms.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(terms.text)} />}
         </section>
     )
 }
