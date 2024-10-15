@@ -11,8 +11,8 @@ export async function getStaticPaths() {
         params: { slug: page.slug },
         props: {
             page,
-            prevPage: index > 0 ? pages[index - 1] : null, // Previous page
-            nextPage: index + 1 < pageCount ? pages[index + 1] : null // Next page
+            prevPage: index + 1 !== pageCount ? pages[index + 1] : null,
+            nextPage: index !== 0 ? pages[index - 1] : null
         }
     }));
 }
