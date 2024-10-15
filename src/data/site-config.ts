@@ -28,6 +28,13 @@ export type Contact = {
     image?: Image;
 };
 
+export type Terms = {
+    title?: string;
+    text?: string;
+    image?: Image;
+};
+
+
 export type Subscribe = {
     title?: string;
     text?: string;
@@ -46,6 +53,7 @@ export type SiteConfig = {
     hero?: Hero;
     about?: About;
     contact?: Contact;
+    terms?: Terms;
     subscribe?: Subscribe;
     postsPerPage?: number;
     projectsPerPage?: number;
@@ -125,6 +133,14 @@ const siteConfig: SiteConfig = {
     contact: {
         title: 'contact Title',
         text: "contact desc",
+        image: {
+            src: '/medium.webp',
+            alt: 'Alt Text'
+        },
+    },
+    terms: {
+        title: 'Terms',
+        text: "./src/pages/terms/terms.md",
         image: {
             src: '/medium.webp',
             alt: 'Alt Text'

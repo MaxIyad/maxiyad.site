@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Terms from '../../components/Terms.astro';
+import siteConfig from '../../data/site-config';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
+
+const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
+---
+
+<BaseLayout description={'Terms.'} image={siteConfig.image}>
+    <Terms />
+</BaseLayout>
