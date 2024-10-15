@@ -7,8 +7,6 @@ import ProjectPreview from '../components/ProjectPreview.astro';
 import siteConfig from '../data/site-config';
 import { sortItemsByDateDesc } from '../utils/data-utils';
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-
 const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
 ---
 
