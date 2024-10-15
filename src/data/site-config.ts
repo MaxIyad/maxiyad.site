@@ -140,7 +140,7 @@ const siteConfig: SiteConfig = {
     },
     terms: {
         title: 'Terms',
-        text: '',
+        text: '123',
         image: {
             src: '/medium.webp',
             alt: 'Alt Text'
