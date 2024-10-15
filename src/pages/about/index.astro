@@ -1,0 +1,97 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import BaseHead, { type Props as HeadProps } from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Nav from '../../components/Nav.astro';
+import Subscribe from '../../components/Subscribe.astro';
+
+export type Props = HeadProps & { showHeader?: boolean };
+
+const { showHeader = true, ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="antialiased break-words">
+    <head>
+        <BaseHead {...head} />
+        <script>
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
+        <ViewTransitions />
+    </head>
+    <body class="bg-main text-main">
+        <div class="flex flex-col min-h-screen px-4 md:px-8">
+            <Nav />
+            <Subscribe class="my-16 sm:my-24" />
+            {showHeader && <Header />}
+            <main class="grow w-full max-w-3xl mx-auto">
+                <article>
+                    <h1>About</h1>
+                    <p>Published on: 1999-10-15</p>
+                    <img src="/about.jpeg" alt="A person sitting at a desk in front of a computer" />
+
+                    <p>
+                        <strong>Note!</strong> This about page is entirely fictional and created for the purpose of showcasing <a
+                            href="https://justgoodui.com/astro-themes/dante/">Dante Astro.js theme functionality</a
+                        >.
+                    </p>
+
+                    <h2>Ethan Donovan - Web Developer based in Estonia</h2>
+                    <p>
+                        <strong>Greetings!</strong> I'm Ethan Donovan, a passionate web developer residing in the picturesque landscapes of <a
+                            href="https://en.wikipedia.org/wiki/Estonia">Estonia</a
+                        >. With a keen eye for design and a love for crafting seamless digital experiences, I bring a unique blend of creativity and technical
+                        expertise to the world of web development.
+                    </p>
+
+                    <h2>Skills and Expertise</h2>
+                    <p>
+                        I specialize in front-end and back-end development, utilizing the latest technologies to build responsive and user-friendly websites. My
+                        proficiency includes <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and frameworks such as <strong
+                            >Astro.js</strong
+                        > for dynamic and interactive user interfaces. On the server side, I'm well-versed in <strong>Node.js</strong> and have experience with database
+                        management systems like <strong>MongoDB</strong>.
+                    </p>
+
+                    <h2>Innovation and Problem-Solving</h2>
+                    <p>
+                        I thrive on solving complex problems and transforming ideas into functional, elegant websites. Whether it's optimizing performance,
+                        implementing new features, or troubleshooting issues, I approach each challenge with enthusiasm and a commitment to delivering
+                        high-quality solutions.
+                    </p>
+
+                    <h2>Global Perspective, Local Impact</h2>
+                    <p>
+                        Living in Estonia has not only influenced my appreciation for nature and culture but has also shaped my approach to web development. I
+                        understand the importance of creating digital solutions that resonate with local audiences while maintaining a global perspective.
+                    </p>
+
+                    <h2>Continuous Learning</h2>
+                    <p>
+                        The dynamic nature of the tech industry inspires me to stay up-to-date with the latest trends and advancements. I'm always eager to
+                        expand my skill set and embrace emerging technologies that enhance the functionality and aesthetics of the websites I create.
+                    </p>
+
+                    <h2>Collaboration and Communication</h2>
+                    <p>
+                        I believe in the power of collaboration and effective communication. Whether working with clients, designers, or fellow developers, I
+                        value clear communication to ensure the success of every project.
+                    </p>
+
+                    <h2>Get in Touch</h2>
+                    <p>
+                        Are you looking to elevate your online presence or bring your digital ideas to life? I'd love to hear from you! Feel free to reach out
+                        for collaboration, consultation, or just a friendly chat about all things web development.
+                    </p>
+
+                    <p><em>Let's build something amazing together!</em></p>
+                </article>
+            </main>
+            <Subscribe class="my-16 sm:my-24" />
+            <Footer />
+        </div>
+    </body>
+</html>
