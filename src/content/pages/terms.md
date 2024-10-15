@@ -1,6 +1,6 @@
 ---
 title: Terms of Service
-publishDate: 'Jan 1 1999'
+publishDate: 'Jan 1 9999'
 seo:
   title: Terms of Service
   description: Explore the terms and conditions of Dante website for a clear understanding of guidelines and responsibilities.

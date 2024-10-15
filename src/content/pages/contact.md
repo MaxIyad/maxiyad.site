@@ -1,6 +1,6 @@
 ---
 title: Get in touch
-publishDate: 'Jan 2 1999'
+publishDate: 'Jan 2 9999'
 seo:
   title: Contact
   description: Get in touch through email or social media! Let me know how I can help.
