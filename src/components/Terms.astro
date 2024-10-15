@@ -17,7 +17,7 @@ const terms = siteConfig.terms;
                     {terms.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{terms.image.caption}</figcaption>}
                 </figure>
             )}
-            {mainText && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(mainText)} />}
+            {mainText}
         </section>
     )
 }
