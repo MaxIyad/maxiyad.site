@@ -1,0 +1,22 @@
+---
+import { marked } from 'marked';
+import Button from './Button.astro';
+import siteConfig from '../data/site-config';
+
+const contact = siteConfig.contact;
+---
+
+{
+    (contact?.title || contact?.image?.src || contact?.text) && (
+        <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
+            {contact.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{contact.title}</h1>}
+            {contact.image?.src && (
+                <figure>
+                    <img class="w-full" src={contact.image.src} loading="lazy" decoding="async" alt={contact.image.alt || ''} />
+                    {contact.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{contact.image.caption}</figcaption>}
+                </figure>
+            )}
+            {contact.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(contact.text)} />}
+        </section>
+    )
+}

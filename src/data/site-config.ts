@@ -20,7 +20,12 @@ export type About = {
     title?: string;
     text?: string;
     image?: Image;
-    actions?: Link[];
+};
+
+export type Contact = {
+    title?: string;
+    text?: string;
+    image?: Image;
 };
 
 export type Subscribe = {
@@ -40,6 +45,7 @@ export type SiteConfig = {
     socialLinks?: Link[];
     hero?: Hero;
     about?: About;
+    contact?: Contact;
     subscribe?: Subscribe;
     postsPerPage?: number;
     projectsPerPage?: number;
@@ -111,6 +117,14 @@ const siteConfig: SiteConfig = {
     about: {
         title: 'About Title',
         text: "About desc",
+        image: {
+            src: '/medium.webp',
+            alt: 'Alt Text'
+        },
+    },
+    contact: {
+        title: 'contact Title',
+        text: "contact desc",
         image: {
             src: '/medium.webp',
             alt: 'Alt Text'
