@@ -18,7 +18,7 @@ const contact = siteConfig.contact;
                 </figure>
             )}
             {contact.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(contact.text)} />}
-            <ContactForm class="my-16 sm:my-24" />
+            <ContactForm class="my-16 sm:my-4" />
         </section>
     )
 }
