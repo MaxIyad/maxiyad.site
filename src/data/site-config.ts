@@ -30,7 +30,6 @@ export type Contact = {
 export type Terms = {
     title?: string;
     text?: string;
-    image?: Image;
 };
 
 
@@ -69,6 +68,10 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
         {
+            text: 'Templates',
+            href: '/'
+        },
+        {
             text: 'All Posts',
             href: '/posts'
         },
@@ -77,8 +80,6 @@ const siteConfig: SiteConfig = {
             href: '/'
         },
 
-
-
     ],
     footerNavLinks: [
         {
@@ -86,13 +87,18 @@ const siteConfig: SiteConfig = {
             href: '/about'
         },
         {
+            text: 'Templates',
+            href: '/'
+        },
+        {
             text: 'Contact',
             href: '/contact'
         },
+
     ],
     socialLinks: [
         {
-            text: 'X.com',
+            text: 'x.com',
             href: 'https://x.com/Max__Iyad'
         }
     ],
@@ -126,10 +132,6 @@ const siteConfig: SiteConfig = {
     terms: {
         title: 'Terms',
         text: '123',
-        image: {
-            src: '/medium.webp',
-            alt: 'Alt Text'
-        },
     },
     subscribe: {
         title: 'Sell more, better.',
