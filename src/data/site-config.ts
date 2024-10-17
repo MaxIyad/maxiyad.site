@@ -132,8 +132,8 @@ const siteConfig: SiteConfig = {
         },
     },
     subscribe: {
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
+        title: 'Sell better, more.',
+        text: 'Get the daily 5-min newsletter helping restaurant owners grow',
         formUrl: '#'
     },
     postsPerPage: 8,
