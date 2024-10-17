@@ -13,6 +13,7 @@ export type Hero = {
     title?: string;
     text?: string;
     actions?: Link[];
+    image?: Image;
 };
 
 export type About = {
@@ -106,6 +107,10 @@ const siteConfig: SiteConfig = {
         title: 'Bring Back Your Dream Restaurant',
         text: "You've poured your heart and soul into your store. But hard work can only get you so far and a poor foundation will have you working overtime and not seeing results.\n\n" +
             "It's time to set yourself apart as the leading restaurant and become the kick-ass restaurant your customers cannot wait to come back to.",
+        image: {
+            src: '/medium.webp',
+            alt: 'Alt Text'
+        },
         actions: [
             {
                 text: 'Get Started',
