@@ -4,7 +4,6 @@ import Button from './Button.astro';
 import siteConfig from '../data/site-config';
 
 const about = siteConfig.about;
-
 ---
 
 {
@@ -17,13 +16,7 @@ const about = siteConfig.about;
                     {about.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{about.image.caption}</figcaption>}
                 </figure>
             )}
-            {about.text && (
-                <div 
-                    class="max-w-none prose prose-dante sm:prose-lg" 
-                    set:html={marked.parse(about.text)} 
-                    style={{ maxWidth: '80ch' }} // Adjusts the max width to 80 characters
-                />
-            )}
+            {about.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(about.text)} />}
         </section>
     )
 }
