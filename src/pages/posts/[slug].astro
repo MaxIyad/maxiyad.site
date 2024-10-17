@@ -6,13 +6,13 @@ import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
     const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
-    const pageCount = pages.length;
-    return pages.map((page, index) => ({
+    const projectCount = pages.length;
+    return pages.map((project, index) => ({
         params: { slug: page.slug },
         props: {
-            page,
-            prevPage: index + 1 !== pageCount ? pages[index + 1] : null,
-            nextPage: index !== 0 ? pages[index - 1] : null
+            project,
+            prevProject: index + 1 !== projectCount ? pages[index + 1] : null,
+            nextProject: index !== 0 ? pages[index - 1] : null
         }
     }));
 }
