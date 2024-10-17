@@ -40,6 +40,12 @@ export type Subscribe = {
     formUrl: string;
 };
 
+export type ContactForm = {
+    title?: string;
+    text?: string;
+    formUrl: string;
+};
+
 export type SiteConfig = {
     logo?: Image;
     title: string;
@@ -54,6 +60,7 @@ export type SiteConfig = {
     contact?: Contact;
     terms?: Terms;
     subscribe?: Subscribe;
+    contactForm?: ContactForm;
     postsPerPage?: number;
     projectsPerPage?: number;
 };
@@ -142,6 +149,11 @@ const siteConfig: SiteConfig = {
         title: 'Sell more, better.',
         text: 'Get the daily 5-min newsletter helping restaurant owners grow',
         formUrl: '#'
+    },
+    contactForm: {
+        title: 'Get in Touch',
+        text: 'Be it a question an invitation to help you in your journey, do not hesitate to get in touch.',
+        formUrl: '/'
     },
     postsPerPage: 8,
     projectsPerPage: 8
