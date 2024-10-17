@@ -88,7 +88,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'Templates',
-            href: '/'
+            href: 'https://gumroad.com'
         },
         {
             text: 'Contact',
