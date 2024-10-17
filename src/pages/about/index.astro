@@ -5,9 +5,8 @@ import Button from '../../components/Button.astro';
 import About from '../../components/About.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import siteConfig from '../../data/site-config';
-import { sortItemsByDateDesc } from '../../utils/data-utils';
 
-const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
+const projects = await getCollection('pages');
 ---
 
 <BaseLayout description={'About.'} image={siteConfig.image}>
