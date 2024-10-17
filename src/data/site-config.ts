@@ -132,7 +132,7 @@ const siteConfig: SiteConfig = {
         },
     },
     subscribe: {
-        title: 'Sell better, more.',
+        title: 'Sell more, better.',
         text: 'Get the daily 5-min newsletter helping restaurant owners grow',
         formUrl: '#'
     },
