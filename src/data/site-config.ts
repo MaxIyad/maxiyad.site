@@ -127,11 +127,9 @@ const siteConfig: SiteConfig = {
     },
     about: {
         title: 'Meet your specialist',
-        text: "I'm Max, a restaurant turn-arounder specialist. I've specialized in strategic systems that turn struggling restaurants in Ireland into thriving dream stores. My experience started with a <€150/day average restaurant in the heart of Waterford. I grew it to €1.5k/day earning in 3 months. Doing that, I discovered my passion for reviving dreams and encouraging restaurants to thrive." +
-            "" +
+        text: "I'm Max, a restaurant turn-arounder specialist. I've specialized in strategic systems that turn struggling restaurants in Ireland into thriving dream stores. My experience started with a <€150/day average restaurant in the heart of Waterford. I grew it to €1.5k/day earning in 3 months. Doing that, I discovered my passion for reviving dreams and encouraging restaurants to thrive.\n\n" +
 
-            "It's my passion because I know how it feels to place all your effort into a dying business, only to get nothing back. As an extremely systematic and resourceful person, I've found my purpose in getting restaurant owners out of that slump. Because seeing their face shine once again when seeing their thriving store can keep me going forever." +
-            "" +
+            "It's my passion because I know how it feels to place all your effort into a dying business, only to get nothing back. As an extremely systematic and resourceful person, I've found my purpose in getting restaurant owners out of that slump. Because seeing their face shine once again when seeing their thriving store can keep me going forever.\n\n" +
 
             "My goal is to see your face shine once more when thinking about your restaurant. And revamp it to the thriving business we know it can be.",
         image: {
