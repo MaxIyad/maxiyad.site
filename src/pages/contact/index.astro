@@ -5,7 +5,7 @@ import Contact from '../../components/Contact.astro';
 import siteConfig from '../../data/site-config';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
-const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
+const projects = await getCollection('pages');
 ---
 
 <BaseLayout description={'Contact.'} image={siteConfig.image}>
