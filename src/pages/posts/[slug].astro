@@ -5,23 +5,23 @@ import ProjectPreview from '../../components/ProjectPreview.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 
 export async function getStaticPaths() {
-    const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
-    const pageCount = pages.length;
-    return pages.map((page, index) => ({
-        params: { slug: page.slug },
+    const projects = (await getCollection('pages')).sort(sortItemsByDateDesc);
+    const projectCount = projects.length;
+    return projects.map((project, index) => ({
+        params: { slug: project.slug },
         props: {
-            page,
-            prevPage: index + 1 !== pageCount ? pages[index + 1] : null,
-            nextPage: index !== 0 ? pages[index - 1] : null
+            project,
+            prevProject: index + 1 !== projectCount ? projects[index + 1] : null,
+            nextProject: index !== 0 ? projects[index - 1] : null
         }
     }));
 }
 
-type Props = { page: CollectionEntry<'pages'>; prevProject: CollectionEntry<'pages'>; nextProject: CollectionEntry<'pages'> };
+type Props = { project: CollectionEntry<'pages'>; prevProject: CollectionEntry<'pages'>; nextProject: CollectionEntry<'pages'> };
 
-const { page, prevPage, nextPage } = Astro.props;
-const { title, description, seo } = page.data;
-const { Content } = await page.render();
+const { project, prevPage, nextPage } = Astro.props;
+const { title, description, seo } = project.data;
+const { Content } = await project.render();
 ---
 
 <BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} image={seo?.image} pageType="article" showHeader={false}>
