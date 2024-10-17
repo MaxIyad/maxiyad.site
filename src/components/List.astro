@@ -1,5 +1,0 @@
----
-const lists = await Astro.glob('../content/pages/*.md');
-
-lists.sort((a, b) => Date.parse(b.frontmatter.order) - Date.parse(a.frontmatter.order));
----
