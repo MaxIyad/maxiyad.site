@@ -3,9 +3,10 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
+import lists from '../../components/List.astro';
 
 export async function getStaticPaths() {
-    const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
+    const pages = (await getCollection('pages')).lists;
     const pageCount = pages.length;
     return pages.map((page, index) => ({
         params: { slug: page.slug },
