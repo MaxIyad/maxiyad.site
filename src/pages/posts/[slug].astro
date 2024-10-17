@@ -8,7 +8,7 @@ export async function getStaticPaths() {
     const pages = (await getCollection('pages')).sort(sortItemsByDateDesc);
     const projectCount = pages.length;
     return pages.map((project, index) => ({
-        params: { slug: page.slug },
+        params: { slug: project.slug },
         props: {
             project,
             prevProject: index + 1 !== projectCount ? pages[index + 1] : null,

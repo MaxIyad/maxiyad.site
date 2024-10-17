@@ -3,7 +3,6 @@ title: 'EcoBuddy: Sustable Living App'
 description: EcoBuddy is a mobile app that gamifies sustainable living. Users can set eco-friendly goals, track their carbon footprint, and earn virtual rewards for adopting environmentally conscious habits.
 excerpt: Choosing the right framework for your web project is a critical decision that can significantly impact the development process and the success of your project. With so many options available, it's essential to consider various factors before making a choice.
 publishDate: 'Jan 02 1000'
-order: '3'
 seo:
   image:
     src: '/project-1.jpg'
