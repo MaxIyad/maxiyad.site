@@ -12,7 +12,6 @@ export type Link = {
 export type Hero = {
     title?: string;
     text?: string;
-    image?: Image;
     actions?: Link[];
 };
 
@@ -60,13 +59,10 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    title: 'Dante',
-    subtitle: 'Minimal Astro.js theme',
-    description: 'Astro.js and Tailwind CSS theme for  and portfolio by justgoodui.com',
-    image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
-    },
+    title: 'Max Iyad',
+    subtitle: 'Restaurant Consultant',
+    description: 'Max Iyad helping restaurant owners make more money and work less',
+
     headerNavLinks: [
         {
             text: 'Home',
@@ -96,28 +92,17 @@ const siteConfig: SiteConfig = {
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
-        },
-        {
-            text: 'Instagram',
-            href: 'https://instagram.com/'
-        },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            text: 'X.com',
+            href: 'https://x.com/Max__Iyad'
         }
     ],
     hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/JustGoodUI/dante-astro-theme'>GitHub</a> or follow me on <a href='https://twitter.com/justgoodui'>Twitter/X</a>.",
-        image: {
-            src: '/medium.webp',
-            alt: 'A person sitting at a desk in front of a computer'
-        },
+        title: 'Bring Back Your Dream Restaurant',
+        text: "You've poured your heart and soul into your store. But hard work can only get you so far and a poor foundation will have you working overtime and not seeing results.\n\n" +
+            "It's time to set yourself apart as the leading restaurant and become the kick-ass restaurant your customers cannot wait to come back to.",
         actions: [
             {
-                text: 'Get in Touch',
+                text: 'Get Started',
                 href: '/contact'
             }
         ]
