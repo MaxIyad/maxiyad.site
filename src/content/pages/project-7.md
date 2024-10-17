@@ -4,6 +4,7 @@ description: CryptoTrader Dashboard is a comprehensive web application designed 
 excerpt: Choosing the right framework for your web project is a critical decision that can significantly impact the development process and the success of your project. With so many options available, it's essential to consider various factors before making a choice.
 publishDate: 'Jan 10 9999'
 isFeatured: true
+order: '4'
 seo:
   image:
     src: 'project-7.jpg'
